@@ -1,7 +1,7 @@
-import Login from "../Page/Login"
-import MainScreen from "../Page/MainScreen"
-import Player from "../Page/Player"
-import Profile from "../Page/Profile"
+import Login from "../pages/Login"
+import MainScreen from "../pages/MainScreen"
+import Player from "../pages/Player"
+import Profile from "../pages/Profile"
 
 export const publicRoutes = [
     {

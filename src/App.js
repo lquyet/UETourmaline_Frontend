@@ -1,5 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import {publicRoutes} from './routes'
+import {publicRoutes} from './Routes'
 function App() {
   return (
     <div className="App">

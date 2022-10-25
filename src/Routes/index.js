@@ -2,6 +2,7 @@ import Login from "../pages/Login"
 import MainScreen from "../pages/MainScreen"
 import Player from "../pages/Player"
 import Profile from "../pages/Profile"
+import Upload from "../pages/Upload"
 
 export const publicRoutes = [
     {
@@ -13,11 +14,15 @@ export const publicRoutes = [
         page: Profile
     },
     {
-        path:'login',
+        path:'/login',
         page: Login
     },
     {
-        path:'player',
+        path:'/player',
         page: Player
+    },
+    {
+        path: '/upload',
+        page: Upload
     }
 ]

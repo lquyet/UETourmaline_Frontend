@@ -1,10 +1,25 @@
-﻿
+﻿import classNames from 'classnames/bind';
+import DropFile from '../../components/DropFile';
+import styles from './Upload.module.scss';
+
+const cx = classNames.bind(styles);
+
 function Upload() {
+    const handleFileChange = (files) => {
+        console.log(files);
+    };
+
     return (
-        <>
-            <h1> Quyền làm cho t 1 cái nút mà nó hiện cái chọn file nhé</h1>
-            <h1> Xong thì làm 1 cái hộp để kéo thả file vào</h1>
-        </>
-    )
+        <div className={cx('wrapper')}>
+            <div className={cx('container')}>
+                <h1 className={cx('title')}>Upload music</h1>
+                <DropFile
+                    onFileChange={(files) => {
+                        handleFileChange(files);
+                    }}
+                />
+            </div>
+        </div>
+    );
 }
-export default Upload
+export default Upload;

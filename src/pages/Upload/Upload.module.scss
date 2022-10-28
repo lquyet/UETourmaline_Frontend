@@ -1,0 +1,24 @@
+$background-wrapper: #d9dce4;
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $background-wrapper;
+}
+
+.container {
+    min-width: 45rem;
+    min-height: 30rem;
+    border-radius: 2.4rem;
+    margin: 2.4rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    
+    h1 {
+        padding: 20px;
+        text-align: center;
+    }
+}

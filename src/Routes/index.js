@@ -1,3 +1,4 @@
+import DefaultLayout from "../components/Layouts/DefaultLayout"
 import Login from "../pages/Login"
 import MainScreen from "../pages/MainScreen"
 import Player from "../pages/Player"
@@ -8,6 +9,7 @@ export const publicRoutes = [
     {
         path:'/',
         page:MainScreen,
+        layout: DefaultLayout
     },
     {
         path:'/profile',

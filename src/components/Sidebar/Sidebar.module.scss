@@ -11,6 +11,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    color: var(--active-color);
     .image-logo {
         width: 54px;
         height: 42px;
@@ -20,11 +21,11 @@
         width: 130px;
         height: 27px;
         font-size: 22px;
-        color: #FFFFFF;
+        color: var(--white);
     }
 }
 .actions {
-    margin-top: 15px;
+    margin-bottom: 16px;
 }
 
 .empty {

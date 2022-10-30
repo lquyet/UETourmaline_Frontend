@@ -4,27 +4,31 @@ import MainScreen from "../pages/MainScreen"
 import Player from "../pages/Player"
 import Profile from "../pages/Profile"
 import Upload from "../pages/Upload"
-
+import { routeConfigs } from "./routeconfigs"
 export const publicRoutes = [
     {
-        path:'/',
+        path:routeConfigs.homeRoute,
         page:MainScreen,
         layout: DefaultLayout
     },
     {
-        path:'/profile',
+        path:routeConfigs.profileRoute,
         page: Profile
     },
     {
-        path:'/login',
+        path: routeConfigs.loginRoute,
         page: Login
     },
     {
-        path:'/player',
+        path:routeConfigs.playerRoute,
         page: Player
     },
     {
-        path: '/upload',
+        path: routeConfigs.uploadRoute,
         page: Upload
+    },
+    {
+        path: routeConfigs.libraryRoute,
+        page: MainScreen,
     }
 ]

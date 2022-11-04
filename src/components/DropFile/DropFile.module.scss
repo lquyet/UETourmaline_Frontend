@@ -1,83 +1,161 @@
 $border-color: #4267b2;
 .wrapper {
     padding: 1rem 2rem;
-}
-
-.drop-area {
-    position: relative;
-    border: 2px dashed $border-color;
-    border-radius: 2rem;
-    background-color: rgba($color: $border-color, $alpha: 0.15);
-    text-align: center;
-
-    img {
-        width: 100px;
-    }
-
-    p {
-        color: #c8c0c0;
-        padding: 0 1rem 1rem;
-        font-weight: 500;
-    }
-
-    input {
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-    }
-
-    &:hover,
-    &.dragover {
-        opacity: 0.6;
-    }
-}
-
-.preview {
-    margin-top: 3rem;
-    font-weight: 500;
-
-    .file-list {
-        // css thêm nếu cần scroll
-    }
-    > p {
-        font-size: 1.8rem;
-        margin-top: 20px;
-        padding: 0 1rem 1rem;
-    }
-
-    .drop-file-item {
-        position: relative;
+    .upload-area {
         display: flex;
         align-items: center;
-        margin-bottom: 1rem;
-        background-color: #d9dce4;
-        padding: 1rem;
+    }
+}
+
+// upload-area
+.left-part {
+    width: 390px;
+    .drop-area {
+        position: relative;
+        border: 2px dashed $border-color;
         border-radius: 2rem;
+        background-color: rgba($color: $border-color, $alpha: 0.15);
+        text-align: center;
 
         img {
-            width: 5rem;
+            width: 180px;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .drop-file-item-info {
-            margin-left: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        p {
+            color: #c8c0c0;
+            padding: 0 1rem 1rem;
+            font-weight: 500;
         }
 
-        .del-drop-file-item {
+        input {
             position: absolute;
-            right: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 0.2rem 1rem;
-            border-radius: 50%;
-            background-color: #fff;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             cursor: pointer;
         }
+
+        &:hover,
+        &.dragover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.song-details {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    width: 400px;
+    margin: 0 0 24px 24px;
+
+    .add {
+        position: absolute;
+        font-size: 1.6rem;
+        font-weight: 600;
+        top: 0;
+        right: 20px;
+        padding: 4px 20px;
+        border: 1px solid #ccc;
+        border-radius: 999px;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba($color: #000, $alpha: 0.15);
+        }
+    }
+
+    .song-info {
+        .form-group {
+            padding-left: 16px;
+            label {
+                font-weight: 600;
+                color: #000000b3;
+                display: inline-block;
+                margin-top: 8px;
+                cursor: pointer;
+            }
+            .form-control {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    .message {
+        display: none;
+        text-align: center;
+        color: red;
+        font-weight: 600;
+        font-style: italic;
+        margin-top: 1rem;
+    }
+    &.invalid .message {
+        display: block;
+    }
+}
+
+// preview
+.preview {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    .preview-container {
+        // scroll
+        overflow-y: auto;
+        height: 20rem;
+        margin-top: 5px;
+        &::-webkit-scrollbar {
+            width: 8px;
+            border-radius: 0;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: #1618230f;
+            height: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            opacity: 0;
+        }
+
+        .file-list {
+            margin: 0 10px;
+        }
+    }
+}
+
+.drop-file-item {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    background-color: #d9dce4;
+    padding: 1rem 4.5rem 1rem 1rem;
+    border-radius: 2rem;
+
+    img {
+        width: 5rem;
+    }
+
+    .drop-file-item-info {
+        margin-left: 2rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & p:nth-child(1) {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+    }
+
+    .down-drop-file-item,
+    .del-drop-file-item {
+        font-size: 1.8rem;
+        margin-left: 10px;
+        cursor: pointer;
     }
 }

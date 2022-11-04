@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import { useState } from "react";
 import styles from "./Search.module.scss";
 
-import { SearchIcon } from "../../assets/images/HomeScreenImages";
+import { SearchIcon } from "../Icons";
 const cx = classNames.bind(styles);
 
 function Search() {

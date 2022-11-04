@@ -4,13 +4,14 @@ $background-wrapper: #d9dce4;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    min-height: 100vh;
+    // width: 100vw;
+    // min-height: 100vh;
+    height: calc(100vh - 64px);
     background-color: $background-wrapper;
 }
 
 .container {
-    min-width: 45rem;
+    // min-width: 530px;
     min-height: 30rem;
     border-radius: 2.4rem;
     margin: 2.4rem;

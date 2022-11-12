@@ -1,3 +1,4 @@
+import className from 'classnames/bind';
 
 function Profile() {
     return (

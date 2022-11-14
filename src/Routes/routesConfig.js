@@ -1,4 +1,4 @@
-export const routeConfigs = {
+export const routesConfig = {
     homeRoute: '/',
     profileRoute: '/profile',
     loginRoute: '/login',

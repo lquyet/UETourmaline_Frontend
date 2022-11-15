@@ -1,4 +1,6 @@
+import { OnlyBodyLayout } from '~/layouts';
 import DefaultLayout from '~/layouts/DefaultLayout';
+import Contact from '~/pages/Contact';
 import Login from '../pages/Login';
 import MainScreen from '../pages/MainScreen';
 import Player from '../pages/Player';
@@ -30,5 +32,10 @@ export const publicRoutes = [
     {
         path: routesConfig.libraryRoute,
         page: MainScreen,
+    },
+    {
+        path: routesConfig.contact,
+        page: Contact,
+        layout: OnlyBodyLayout,
     },
 ];

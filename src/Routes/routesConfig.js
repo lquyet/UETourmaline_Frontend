@@ -9,4 +9,5 @@ export const routesConfig = {
     favoritesRoute: '/favorites',
     settingsRoute: '/setting',
     logoutRoute: '/logout',
+    contact: '/contact',
 };

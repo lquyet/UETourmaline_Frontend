@@ -1,6 +1,6 @@
 $border-color: #4267b2;
 .wrapper {
-    padding: 1rem 2rem;
+    padding: 10px 20px;
     .upload-area {
         display: flex;
         align-items: center;
@@ -13,7 +13,7 @@ $border-color: #4267b2;
     .drop-area {
         position: relative;
         border: 2px dashed $border-color;
-        border-radius: 2rem;
+        border-radius: 20px;
         background-color: rgba($color: $border-color, $alpha: 0.15);
         text-align: center;
 
@@ -25,7 +25,7 @@ $border-color: #4267b2;
 
         p {
             color: #c8c0c0;
-            padding: 0 1rem 1rem;
+            padding: 0 10px 10px;
             font-weight: 500;
         }
 
@@ -55,7 +55,7 @@ $border-color: #4267b2;
 
     .add {
         position: absolute;
-        font-size: 1.6rem;
+        font-size: 16px;
         font-weight: 600;
         top: 0;
         right: 20px;
@@ -93,7 +93,7 @@ $border-color: #4267b2;
         color: red;
         font-weight: 600;
         font-style: italic;
-        margin-top: 1rem;
+        margin-top: 10px;
     }
     &.invalid .message {
         display: block;
@@ -102,12 +102,12 @@ $border-color: #4267b2;
 
 // preview
 .preview {
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
     font-weight: 500;
     .preview-container {
         // scroll
         overflow-y: auto;
-        height: 20rem;
+        height: 200px;
         margin-top: 5px;
         &::-webkit-scrollbar {
             width: 8px;
@@ -131,30 +131,30 @@ $border-color: #4267b2;
 .drop-file-item {
     display: flex;
     align-items: center;
-    margin-top: 1.5rem;
+    margin-top: 15px;
     background-color: #d9dce4;
-    padding: 1rem 4.5rem 1rem 1rem;
-    border-radius: 2rem;
+    padding: 10px 45px 10px 10px;
+    border-radius: 20px;
 
     img {
-        width: 5rem;
+        width: 50px;
     }
 
     .drop-file-item-info {
-        margin-left: 2rem;
+        margin-left: 20px;
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         & p:nth-child(1) {
-            font-size: 1.8rem;
+            font-size: 18px;
             font-weight: 600;
         }
     }
 
     .down-drop-file-item,
     .del-drop-file-item {
-        font-size: 1.8rem;
+        font-size: 18px;
         margin-left: 10px;
         cursor: pointer;
     }

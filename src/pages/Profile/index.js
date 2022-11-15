@@ -1,5 +1,5 @@
-import className from "classnames/bind";
 import { useState, useEffect } from "react";
+import Table from "../../components/Table";
 
 function Profile() {
 	const [userInfo, setUserInfo] = useState({});
@@ -20,6 +20,6 @@ function Profile() {
 		setUserInfo(response);
 	}
 
-    return <h1>Profile</h1>;
+    return <Table itemsData={Object.entries(userInfo)}></Table>
 }
 export default Profile;

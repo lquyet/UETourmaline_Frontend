@@ -1,0 +1,21 @@
+.wrapper {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    // min-height: 100vh;
+    height: 100%;
+    background-color: aliceblue;
+    
+    .table-container {
+        display: table;
+        justify-content: space-between;
+        text-align: start;
+        overflow-wrap: break-word;
+        font-size: 3rem;
+        max-inline-size: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 50%;
+    }
+}

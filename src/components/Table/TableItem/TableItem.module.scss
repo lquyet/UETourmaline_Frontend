@@ -1,0 +1,16 @@
+.row-element {
+    border-bottom: 1px solid black;
+    color: #6a6a6a;
+
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.key-col {
+    color: #b3b3b3;
+}
+
+.value-col {
+    color: rgb(40, 40, 40);
+}

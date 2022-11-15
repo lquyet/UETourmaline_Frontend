@@ -10,8 +10,8 @@ function TableItem({data}) {
 
     //return <tr className={cx('table-element')}>{rowItems}</tr>
     return <tr className={cx('row-element')}>
-        <td>{data[0]}</td>
-        <td>{data[1]}</td>
+        <td className={cx('key-col')}>{data[0]}</td>
+        <td className={cx('value-col')}>{data[1]}</td>
     </tr>
 }
 

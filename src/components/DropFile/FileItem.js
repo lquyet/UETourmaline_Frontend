@@ -45,6 +45,7 @@ function FileItem({ file, handleRemove }) {
             console.log('useEffect called!'); // test re-render
             handleDownload(file);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

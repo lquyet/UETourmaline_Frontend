@@ -1,4 +1,4 @@
-﻿import classNames from 'classnames/bind';
+import classNames from 'classnames/bind';
 import DropFile from '../../components/DropFile';
 import styles from './Upload.module.scss';
 

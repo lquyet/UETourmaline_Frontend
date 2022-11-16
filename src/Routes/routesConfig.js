@@ -1,4 +1,4 @@
-export const routeConfigs = {
+export const routesConfig = {
     homeRoute: '/',
     profileRoute: '/profile',
     loginRoute: '/login',
@@ -9,4 +9,5 @@ export const routeConfigs = {
     favoritesRoute: '/favorites',
     settingsRoute: '/setting',
     logoutRoute: '/logout',
+    contact: '/contact',
 };

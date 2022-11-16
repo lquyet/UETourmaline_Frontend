@@ -1,35 +1,27 @@
 import { Fragment } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { OnlyBodyLayout } from './layouts';
 import DefaultLayout from './layouts/DefaultLayout';
-import { publicRoutes } from './routes';
+import { privateRoute, publicRoutes } from './Routes';
+import { routesConfigPrivate, routesConfigPublic } from './Routes/routesConfig';
 
 function App() {
     return (
         <div className="App">
-            <BrowserRouter>
-                <Routes>
-                    {publicRoutes.map((route, index) => {
+            <Routes>
+                <Route path={routesConfigPublic.homeRoute} element={<DefaultLayout />}>
+                    {publicRoutes.map((route) => {
                         const Page = route.page;
-                        let Layout = DefaultLayout;
-                        if (route.layout) {
-                            Layout = route.layout;
-                        } else if (route.layout === null) {
-                            Layout = Fragment;
-                        }
-                        return (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                element={
-                                    <Layout>
-                                        <Page />
-                                    </Layout>
-                                }
-                            />
-                        );
+                        return <Route path={route.path} element={<Page />} />;
                     })}
-                </Routes>
-            </BrowserRouter>
+                </Route>
+                <Route path={routesConfigPrivate.system} element={<OnlyBodyLayout />}>
+                    {privateRoute.map((route) => {
+                        const Page = route.page;
+                        return <Route path={route.path} element={<Page />} />;
+                    })}
+                </Route>
+            </Routes>
         </div>
     );
 }

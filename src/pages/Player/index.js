@@ -1,7 +1,4 @@
-
 function Player() {
-    return (
-        <h1>Player</h1>
-    )
+    return <h1>Player</h1>;
 }
-export default Player
+export default Player;

@@ -1,34 +1,41 @@
-import DefaultLayout from '../components/Layouts/DefaultLayout';
+import { OnlyBodyLayout } from '~/layouts';
+import DefaultLayout from '~/layouts/DefaultLayout';
+import Contact from '~/pages/Contact';
 import Login from '../pages/Login';
 import MainScreen from '../pages/MainScreen';
 import Player from '../pages/Player';
 import Profile from '../pages/Profile';
 import Upload from '../pages/Upload';
-import { routeConfigs } from './routeConfigs';
+import { routesConfig } from './routesConfig';
 export const publicRoutes = [
     {
-        path: routeConfigs.homeRoute,
+        path: routesConfig.homeRoute,
         page: MainScreen,
         layout: DefaultLayout,
     },
     {
-        path: routeConfigs.profileRoute,
+        path: routesConfig.profileRoute,
         page: Profile,
     },
     {
-        path: routeConfigs.loginRoute,
+        path: routesConfig.loginRoute,
         page: Login,
     },
     {
-        path: routeConfigs.playerRoute,
+        path: routesConfig.playerRoute,
         page: Player,
     },
     {
-        path: routeConfigs.uploadRoute,
+        path: routesConfig.uploadRoute,
         page: Upload,
     },
     {
-        path: routeConfigs.libraryRoute,
+        path: routesConfig.libraryRoute,
         page: MainScreen,
+    },
+    {
+        path: routesConfig.contact,
+        page: Contact,
+        layout: OnlyBodyLayout,
     },
 ];

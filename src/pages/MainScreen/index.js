@@ -1,7 +1,4 @@
-
 function MainScreen() {
-    return (
-        <h1>MainScreen</h1>
-    )
+    return <h1>MainScreen</h1>;
 }
-export default MainScreen
+export default MainScreen;

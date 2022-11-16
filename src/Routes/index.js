@@ -4,7 +4,7 @@ import Contact from '~/pages/Contact';
 import Login from '../pages/Login';
 import MainScreen from '../pages/MainScreen';
 import Player from '../pages/Player';
-import Profile from '../pages/Profile';
+import {Profile} from '../pages/Profile';
 import Upload from '../pages/Upload';
 import { routesConfig } from './routesConfig';
 export const publicRoutes = [

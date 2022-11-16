@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
-import { routesConfig } from '../../routes/routesConfig';
+import { routesConfig } from '../../routes/routesConfig.js';
 import { AlbumIcon, FavoritesIcon, HomeIcon, LibraryIcon, LogoIcon, LogoutIcon, SettingIcon } from '../Icons';
 import styles from './Sidebar.module.scss';
 import SidebarItem from './SidebarItem';

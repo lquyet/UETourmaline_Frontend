@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Sidebar",
+    "\\src\\components\\Sidebar\\SidebarItem",
+    "\\src\\pages",
+    "\\src\\pages\\Upload",
+    "\\src\\Routes"
+  ],
+  "SelectedNode": "\\src\\pages\\Upload\\index.js",
+  "PreviewInSolutionExplorer": false
+}

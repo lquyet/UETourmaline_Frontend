@@ -10,15 +10,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import styles from './Contact.module.scss';
 
+import emailjs from 'emailjs-com';
+
 const cx = classNames.bind(styles);
 
 function Contact() {
+
+    function sendEmail(e) {
+        e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
+
+        emailjs.sendForm('service_ri6yvj6', 'template_indvrjj', e.target, 'eZafXlsFn3sqDHeHI')
+            .then((result) => {
+                window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
     return (
         <div className="container mx-auto grid h-[610px] w-[920px] grid-cols-2 justify-center shadow-2xl">
             {/* Send message */}
-            <div className="bg-gradient-to-tr from-violet-500 to-fuchsia-500 p-12">
+            <div className="bg-gradient-to-tr from-violet-500 to-fuchsia-500 p-12" >
                 <h1 className="mb-6 text-3xl text-white">Send us a message</h1>
-                <form action="">
+                <form action="" onSubmit={sendEmail}>
                     <div className={cx('form-group')}>
                         <input
                             className={cx('form-control')}

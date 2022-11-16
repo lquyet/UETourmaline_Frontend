@@ -4,38 +4,41 @@ import Contact from '~/pages/Contact';
 import Login from '../pages/Login';
 import MainScreen from '../pages/MainScreen';
 import Player from '../pages/Player';
-import {Profile} from '../pages/Profile';
+import { Profile } from '../pages/Profile';
 import Upload from '../pages/Upload';
-import { routesConfig } from './routesConfig';
+import { routesConfigPrivate, routesConfigPublic } from './routesConfig';
 export const publicRoutes = [
     {
-        path: routesConfig.homeRoute,
-        page: MainScreen,
-        layout: DefaultLayout,
-    },
-    {
-        path: routesConfig.profileRoute,
+        path: routesConfigPublic.profileRoute,
         page: Profile,
     },
     {
-        path: routesConfig.loginRoute,
+        path: routesConfigPublic.loginRoute,
         page: Login,
     },
     {
-        path: routesConfig.playerRoute,
+        path: routesConfigPublic.playerRoute,
         page: Player,
     },
+
     {
-        path: routesConfig.uploadRoute,
-        page: Upload,
-    },
-    {
-        path: routesConfig.libraryRoute,
+        path: routesConfigPublic.libraryRoute,
         page: MainScreen,
     },
+
     {
-        path: routesConfig.contact,
+        path: routesConfigPublic.STAR,
+        page: MainScreen,
+    },
+];
+export const privateRoute = [
+    {
+        path: routesConfigPrivate.contact,
         page: Contact,
         layout: OnlyBodyLayout,
+    },
+    {
+        path: routesConfigPrivate.uploadRoute,
+        page: Upload,
     },
 ];

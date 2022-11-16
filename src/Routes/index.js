@@ -2,7 +2,7 @@ import DefaultLayout from '../components/Layouts/DefaultLayout';
 import Login from '../pages/Login';
 import MainScreen from '../pages/MainScreen';
 import Player from '../pages/Player';
-import Profile from '../pages/Profile';
+import {Profile} from '../pages/Profile';
 import Upload from '../pages/Upload';
 import { routeConfigs } from './routeConfigs';
 export const publicRoutes = [
